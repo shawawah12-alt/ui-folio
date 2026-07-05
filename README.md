@@ -324,17 +324,9 @@ ui-folio/
 
 ## Berkontribusi
 
-Fork, bikin branch, tambah kit atau perbaiki yang ada, buka PR. Aturan lengkap di [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+Mau tambah kit baru atau perbaiki yang udah ada? Fork, bikin branch, kerjain, buka PR. Detail lengkap di [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
-Beberapa hal yang perlu diingat:
-
-- Tulis kode sendiri, jangan salin dari repo berlisensi restriktif
-- Pixel-perfect, responsive, accessible — bukan cuma cantik di screenshot
-- Dark mode wajib (atau eksplisit light only dengan alasan)
-- Sertakan screenshot PNG di README kit kamu (resolusi 760×1520 @ 2x retina)
-- Hindari gradient warna mencolok (biru-merah, ungu-pink) — pilih palet yang tenang
-- Pilih palet yang spesifik: cream paper, warm dark, forest green, terminal, monochrome, sand, dll. Bukan "default Material" atau "iOS blue gradient"
-- **Pakai SVG inline untuk ikon**, jangan emoji. Emoji render beda di tiap OS dan kelihatan gak konsisten
+Singkatnya: tulis kode sendiri, pake SVG buat ikon (bukan emoji), pilih palet yang tenang (bukan gradient biru-merah), dan kasih screenshot PNG. Dark mode kalau masuk akal aja, gak wajib tiap kit. Pakai otak.
 
 ## Roadmap
 
@@ -655,17 +647,9 @@ ui-folio/
 
 ## Contributing
 
-Fork, create a branch, add a kit or improve an existing one, open a PR. Full rules in [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+Want to add a new kit or improve an existing one? Fork, branch, work, open a PR. Full details in [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
-A few things to keep in mind:
-
-- Write your own code, don't copy from repos with restrictive licenses
-- Pixel-perfect, responsive, accessible — not just pretty in a screenshot
-- Dark mode is mandatory (or explicitly light-only with a reason)
-- Include a PNG screenshot in your kit's README (resolution 760×1520 @ 2x retina)
-- Avoid loud color gradients (blue-red, purple-pink) — pick calm palettes
-- Pick a specific palette: cream paper, warm dark, forest green, terminal, monochrome, sand, etc. Not "default Material" or "iOS blue gradient"
-- **Use inline SVG for icons**, not emoji. Emoji render differently across OSes and look inconsistent
+Short version: write your own code, use SVG for icons (not emoji), pick a calm palette (not blue-red gradient), and include a PNG screenshot. Dark mode if it makes sense — not required for every kit. Use your brain.
 
 ## Roadmap
 

@@ -1,314 +1,121 @@
-# Contributing Guide
+# Contributing
 
-Terima kasih sudah tertarik berkontribusi pada **ui-folio**. Dokumen ini menjelaskan alur kerja dan aturan yang harus diikuti supaya kontribusi kamu diterima dengan lancar.
-Thank you for your interest in contributing to **ui-folio**. This document explains the workflow and rules to follow so your contribution gets merged smoothly.
+Halo, makasih udah mau kontribusi ke **ui-folio**. Gua tulis ini singkat aja — gak pake dokumen 5 halaman kayak company handbook.
 
 ---
 
 # 🇮🇩 Versi Bahasa Indonesia
 
-## Bahasa
+## Tambah kit baru
 
-Kontribusi bisa dalam **Bahasa Indonesia** atau **English**. Komentar kode usahakan English supaya bisa dibaca developer global. README tiap kit **wajib bilingual** (Indonesia di atas, English di bawah) supaya konsisten dengan README utama.
+1. **Fork** repo ini
+2. Bikin branch baru: `git checkout -b feat/nama-kit-kamu`
+3. Bikin folder kit kamu di framework yang sesuai (contoh: `flutter/login-screen-keren/`)
+4. Isi dengan kode asli — `.dart`, `.tsx`, `.swift`, atau `.kt` (bukan cuma mockup)
+5. Tambah `README.md` bilingual (lihat kit yang udah ada buat contoh format)
+6. Screenshot PNG, simpen di `assets/previews/`, embed di README
+7. Commit, push, buka PR
 
-## Cara kontribusi
+Selesai. Gak perlu email dulu, gak perlu minta izin. Langsung aja.
 
-### 1. Fork & Clone
+## Soal aturan
 
-```bash
-git clone https://github.com/<username-mu>/ui-folio.git
-cd ui-folio
-git remote add upstream https://github.com/shawawah12-alt/ui-folio.git
-```
+Gua gak mau bikin daftar aturan panjang. Tapi beberapa hal basic:
 
-### 2. Buat branch baru
+- **Tulis kode sendiri.** Jangan copas dari repo lain yang license-nya restriktif. Kalau mau port desain orang, credit aja di README.
+- **Pake SVG buat ikon, jangan emoji.** Alasannya simple: emoji render beda-beda di Android/iOS/Windows. SVG kelihatan sama di mana-mana.
+- **Pilih palet yang tenang.** Cream, dark warm, forest green, monochrome, sand, paper — itu good. Gradient biru-merah, ungu-pink, material default — itu bad. Kalau ragu, lihat kit yang udah ada.
+- **Dark mode kalau masuk akal.** Gak wajib tiap kit. Login screen emang bagusnya light/dark punya, tapi kalkulator terminal green-on-black ya dark only gitu aja. Pakai otak.
+- **Screenshot PNG, bukan JPG/GIF/MP4.** Resolusi bebas, yang penting tajam. Yang udah ada di repo kebanyakan 760×1520 @ 2x.
+- **Responsive reasonable.** Jangan sampai hancur di iPhone SE atau iPad Pro. Tapi gak perlu test 50 device — common sense aja.
 
-```bash
-git checkout -b feat/nama-kit-kamu
-```
+## Naming folder
 
-### 3. Tambahkan kit kamu
+Pakai kebab-case, format `<tipe>-<gaya>`:
 
-Struktur folder wajib:
-
-```
-<framework>/
-└── nama-kit-kamu/
-    ├── README.md          # Bilingual: Indonesia + English
-    ├── source/            # Kode sumber
-    └── preview.png        # Screenshot 760×1520 @ 2x retina (atau letakkan di assets/previews/)
-```
-
-Contoh untuk Flutter:
-
-```
-flutter/
-└── login-screen-minimalist/
-    ├── README.md
-    ├── lib/
-    │   └── main.dart
-    └── pubspec.yaml
-```
-
-Untuk framework lain:
-- React Native: file `App.tsx` + `package.json`
-- SwiftUI: file `.swift`
-- Jetpack Compose: file `.kt` + `build.gradle` (opsional)
-
-### 4. Commit dengan Conventional Commits
-
-```bash
-git commit -m "feat(flutter): add neumorphism login screen"
-```
-
-Scope yang valid: `flutter`, `react-native`, `swiftui`, `jetpack-compose`, `docs`, `chore`.
-
-### 5. Push & buka Pull Request
-
-```bash
-git push origin feat/nama-kit-kamu
-```
-
-Lalu buka PR ke branch `main` repo utama. Jelaskan di deskripsi PR:
-- Apa kit yang ditambahkan/diubah
-- Framework & palet yang dipakai
-- Screenshot preview (bisa link ke file di repo)
-
-## Aturan kit
-
-- ✅ **Original** — jangan upload kit yang udah ada di repo lain tanpa izin
-- ✅ **Pixel-perfect** — hindari layout yang berantakan di layar kecil (iPhone SE) maupun besar (iPad Pro)
-- ✅ **Accessible** — kontras warna cukup (minimal WCAG AA), ukuran font minimal 14sp
-- ✅ **Responsive** — harus jalan di layar 360px sampai 800px lebar
-- ✅ **Dark mode ready** — wajib support dark mode, atau eksplisit light-only dengan alasan
-- ✅ **SVG inline untuk ikon** — jangan pakai emoji (🔍 ⚙ ⋮). Emoji render beda di tiap OS dan kelihatan gak konsisten
-- ✅ **Screenshot PNG** — resolusi 760×1520 @ 2x retina, simpan di `assets/previews/`
-- ❌ **Dilarang** hardcode API key, token, atau data pribadi
-- ❌ **Dilarang** pakai asset berbayar tanpa lisensi
-- ❌ **Dilarang** gradient warna mencolok (biru-merah, ungu-pink). Pilih palet tenang: cream paper, warm dark, forest green, terminal, monochrome, sand, dll
-
-## Naming convention
-
-Format nama folder:
-
-```
-<tipe-ui>-<gaya>-<framework-spesifik>
-```
-
-Contoh:
-- `login-screen-minimalist`
-- `dashboard-finance`
-- `weather-forecast`
-- `chat-ui-monochrome`
-- `maps-paper`
-
-Gunakan kebab-case (huruf kecil, dipisah `-`). Hindari underscore.
+- `login-screen-minimalist` ✅
+- `LoginScreen_Minimalist` ❌
+- `dashboard-finance` ✅
+- `chat-ui-monochrome` ✅
 
 ## Format README kit
 
-Setiap kit **wajib** punya `README.md` bilingual dengan format:
+Liat aja salah satu kit yang udah ada (contoh: [`flutter/login-screen-minimalist/README.md`](./flutter/login-screen-minimalist/README.md)). Strukturnya:
 
-```markdown
-# Nama kit (Framework)
+- Judul + deskripsi singkat
+- Preview (embed PNG)
+- Detail (bullet palet, tipografi, fitur)
+- Cara pakai (command bash)
+- Customisasi (file mana ubah apa)
+- Tech stack
+- License (MIT)
+- `---`
+- English version (sama persis strukturnya)
 
-Deskripsi singkat dalam Bahasa Indonesia.
+## Review
 
-## Preview
+Gua cek PR biasanya 1-3 hari. Kalau ada yang mau diubah, gua comment di PR-nya. Jangan defensive, kita diskusi aja. Kalau PR-nya udah oke, gua merge.
 
-![preview](../../assets/previews/nama-kit.png)
+## Stuck?
 
-## Detail
-
-- Bullet point fitur-fitur utama
-- Palet warna dengan hex code
-- Tipografi yang dipakai
-
-## Cara pakai
-
-```bash
-cd <framework>/nama-kit
-# Command untuk run
-```
-
-## Customisasi
-
-- File mana yang diubah untuk apa
-- Variabel/state yang perlu di-tweak
-
-## Tech stack
-
-- Framework version
-- Bahasa
-- Dependencies
-
-## License
-
-MIT
-```
-
-Lalu tambahkan versi English di bawah dengan format yang sama, dipisahkan `---`.
-
-## Proses review
-
-- Maintainer akan review dalam **3–7 hari**
-- Kalau ada perubahan, kami kasih comment di PR
-- Setelah merge, kamu masuk ke **Contributors Hall of Fame** di README utama
-
-## Butuh bantuan?
-
-Buka [issue baru](https://github.com/shawawah12-alt/ui-folio/issues/new) dengan label `question` kalau bingung. Kami tidak gigit kok.
+Buka [issue](https://github.com/shawawah12-alt/ui-folio/issues/new) dengan label `question`. Atau kalau lo mau ngobrol ide kit dulu sebelum ngecode, juga boleh. Gak gigit kok.
 
 ---
 
 # 🇬🇧 English Version
 
-## Language
+Hey, thanks for wanting to contribute to **ui-folio**. Keeping this short — no 5-page company-handbook vibes.
 
-Contributions can be in **Indonesian** or **English**. Code comments should preferably be in English so global developers can read them. Each kit's README **must be bilingual** (Indonesian on top, English on bottom) to stay consistent with the main README.
+## Adding a new kit
 
-## How to contribute
+1. **Fork** this repo
+2. Create a new branch: `git checkout -b feat/your-kit-name`
+3. Make your kit folder under the right framework (e.g. `flutter/login-screen-cool/`)
+4. Fill it with real source — `.dart`, `.tsx`, `.swift`, or `.kt` (not just mockups)
+5. Add a bilingual `README.md` (look at existing kits for the format)
+6. Take a PNG screenshot, put it in `assets/previews/`, embed it in the README
+7. Commit, push, open a PR
 
-### 1. Fork & Clone
+That's it. No email first, no asking permission. Just do it.
 
-```bash
-git clone https://github.com/<your-username>/ui-folio.git
-cd ui-folio
-git remote add upstream https://github.com/shawawah12-alt/ui-folio.git
-```
+## On rules
 
-### 2. Create a new branch
+I don't want to write a long rulebook. But a few basics:
 
-```bash
-git checkout -b feat/your-kit-name
-```
+- **Write your own code.** Don't copy from other repos with restrictive licenses. If you're porting someone's design, just credit them in the README.
+- **Use SVG for icons, not emoji.** Reason is simple: emoji renders differently on Android/iOS/Windows. SVG looks the same everywhere.
+- **Pick a calm palette.** Cream, dark warm, forest green, monochrome, sand, paper — those are good. Blue-red gradient, purple-pink, default Material — those are bad. If unsure, look at the existing kits.
+- **Dark mode if it makes sense.** Not required for every kit. A login screen should probably have light/dark, but a terminal-style calculator is dark only and that's fine. Use your brain.
+- **PNG screenshots, not JPG/GIF/MP4.** Resolution is flexible, just make sure it's sharp. Existing ones are mostly 760×1520 @ 2x.
+- **Reasonable responsiveness.** Don't break on iPhone SE or iPad Pro. But you don't need to test 50 devices — common sense is enough.
 
-### 3. Add your kit
+## Folder naming
 
-Required folder structure:
+Use kebab-case, format `<type>-<style>`:
 
-```
-<framework>/
-└── your-kit-name/
-    ├── README.md          # Bilingual: Indonesian + English
-    ├── source/            # Source code
-    └── preview.png        # 760×1520 @ 2x retina screenshot (or place it in assets/previews/)
-```
-
-Example for Flutter:
-
-```
-flutter/
-└── login-screen-minimalist/
-    ├── README.md
-    ├── lib/
-    │   └── main.dart
-    └── pubspec.yaml
-```
-
-For other frameworks:
-- React Native: `App.tsx` file + `package.json`
-- SwiftUI: `.swift` file
-- Jetpack Compose: `.kt` file + `build.gradle` (optional)
-
-### 4. Commit with Conventional Commits
-
-```bash
-git commit -m "feat(flutter): add neumorphism login screen"
-```
-
-Valid scopes: `flutter`, `react-native`, `swiftui`, `jetpack-compose`, `docs`, `chore`.
-
-### 5. Push & open a Pull Request
-
-```bash
-git push origin feat/your-kit-name
-```
-
-Then open a PR to the `main` branch of the upstream repo. In the PR description, explain:
-- Which kit you're adding/changing
-- Framework & palette used
-- Screenshot preview (can be a link to a file in the repo)
-
-## Kit rules
-
-- ✅ **Original** — don't upload a kit that already exists in another repo without permission
-- ✅ **Pixel-perfect** — avoid broken layouts on small (iPhone SE) and large (iPad Pro) screens
-- ✅ **Accessible** — sufficient color contrast (WCAG AA minimum), font size at least 14sp
-- ✅ **Responsive** — must work on screens 360px to 800px wide
-- ✅ **Dark mode ready** — dark mode support is mandatory, or explicitly light-only with a reason
-- ✅ **Inline SVG for icons** — don't use emoji (🔍 ⚙ ⋮). Emoji renders differently across OSes and looks inconsistent
-- ✅ **PNG screenshot** — 760×1520 @ 2x retina resolution, stored in `assets/previews/`
-- ❌ **No** hardcoded API keys, tokens, or personal data
-- ❌ **No** paid assets without a license
-- ❌ **No** loud color gradients (blue-red, purple-pink). Pick calm palettes: cream paper, warm dark, forest green, terminal, monochrome, sand, etc.
-
-## Naming convention
-
-Folder name format:
-
-```
-<ui-type>-<style>-<framework-specific>
-```
-
-Examples:
-- `login-screen-minimalist`
-- `dashboard-finance`
-- `weather-forecast`
-- `chat-ui-monochrome`
-- `maps-paper`
-
-Use kebab-case (lowercase, separated by `-`). Avoid underscores.
+- `login-screen-minimalist` ✅
+- `LoginScreen_Minimalist` ❌
+- `dashboard-finance` ✅
+- `chat-ui-monochrome` ✅
 
 ## Kit README format
 
-Each kit **must** have a bilingual `README.md` with this format:
+Just look at one of the existing kits (e.g. [`flutter/login-screen-minimalist/README.md`](./flutter/login-screen-minimalist/README.md)). Structure:
 
-```markdown
-# Kit name (Framework)
+- Title + short description
+- Preview (embed PNG)
+- Detail (palette, typography, features as bullets)
+- How to use (bash commands)
+- Customization (which file changes what)
+- Tech stack
+- License (MIT)
+- `---`
+- English version (same exact structure)
 
-Short description in Indonesian.
+## Review
 
-## Preview
+I usually check PRs within 1-3 days. If something needs changing, I'll comment on the PR. Don't be defensive, let's just discuss. If it looks good, I'll merge.
 
-![preview](../../assets/previews/kit-name.png)
+## Stuck?
 
-## Detail
-
-- Bullet points of main features
-- Color palette with hex codes
-- Typography used
-
-## How to use
-
-```bash
-cd <framework>/kit-name
-# Command to run
-```
-
-## Customization
-
-- Which file to change for what
-- Variables/state to tweak
-
-## Tech stack
-
-- Framework version
-- Language
-- Dependencies
-
-## License
-
-MIT
-```
-
-Then add the English version below with the same format, separated by `---`.
-
-## Review process
-
-- Maintainer will review within **3–7 days**
-- If changes are needed, we'll comment on the PR
-- After merge, you'll be added to the **Contributors Hall of Fame** in the main README
-
-## Need help?
-
-Open a [new issue](https://github.com/shawawah12-alt/ui-folio/issues/new) with the `question` label if you're stuck. We don't bite.
+Open an [issue](https://github.com/shawawah12-alt/ui-folio/issues/new) with the `question` label. Or if you want to discuss a kit idea before coding, that's fine too. I don't bite.
