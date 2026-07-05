@@ -23,14 +23,16 @@ A curated shelf of mobile UI kits — Flutter, React Native, SwiftUI, Jetpack Co
 
 Kumpulan UI kit mobile siap pakai, lintas framework. Daripada mulai dari blank page tiap project, ambil satu dari sini, sesuaikan, jalan.
 
-Setiap kit punya kode lengkap, screenshot, dan catatan customisasi. Tidak ada boilerplate yang dipaksakan, tidak ada template AI — cuma kode biasa yang ditulis tangan.
+Setiap kit punya kode lengkap (`*.dart`, `*.tsx`, `*.swift`, `*.kt` — bukan cuma mockup), preview GIF beranimasi, dan catatan customisasi. Tidak ada template AI — cuma kode biasa yang ditulis tangan dengan palet yang dipilih satu per satu.
 
 ---
 
 ## Table of contents
 
-- [Kits](#kits)
-- [Categories](#categories)
+- [Flutter kits](#flutter-kits)
+- [React Native kits](#react-native-kits)
+- [SwiftUI kits](#swiftui-kits)
+- [Jetpack Compose kits](#jetpack-compose-kits)
 - [How to use](#how-to-use)
 - [Folder layout](#folder-layout)
 - [Contributing](#contributing)
@@ -39,92 +41,243 @@ Setiap kit punya kode lengkap, screenshot, dan catatan customisasi. Tidak ada bo
 
 ---
 
-## Kits
+## Flutter kits
 
-### 1. Login screen — minimalist (Flutter)
+### 1. Login screen — minimalist
 
-Login ala Swiss. Putih, hitam, satu accent, tanpa gradient, tanpa shadow. Input pakai border bawah 1px, bukan kotak. Cocok untuk aplikasi yang ingin terlihat tenang dan terorganisir.
+Login ala Swiss. Putih, hitam, satu accent, tanpa gradient, tanpa shadow. Input pakai border bawah 1px.
 
 <p align="center">
-  <img src="assets/previews/flutter-login-minimalist.png" width="280" alt="Flutter login minimalist preview">
+  <img src="assets/previews/flutter-login-minimalist.png" width="240" alt="Flutter login minimalist">
 </p>
-
-- Background putih, accent `#111111`
-- Tipografi Inter
-- Input border bawah, bukan kotak
-- Tombol solid hitam, elevation 0
-- Dark mode ikut sistem
 
 Lihat di [`flutter/login-screen-minimalist/`](./flutter/login-screen-minimalist).
 
----
+<details>
+<summary><b>Lihat 4 Flutter kit lainnya</b></summary>
+<br>
 
-### 2. Login screen — warm dark (React Native)
+#### 2. Onboarding carousel
 
-Login dengan palet coklat hangat dark mode. Background warm near-black `#1A1714`, accent terracotta `#C66B3D`. Tanpa gradient, tanpa blur, tanpa shadow. Card polos dengan border tipis.
+3 slide dengan ilustrasi sirkular (sage/sand/sky) dan dots indicator animated. Tombol "Lewati" di kanan atas, berubah jadi "Mulai" di slide terakhir.
 
 <p align="center">
-  <img src="assets/previews/rn-login-warm.png" width="280" alt="React Native warm dark login preview">
+  <img src="assets/previews/flutter-onboarding.gif" width="240" alt="Flutter onboarding">
 </p>
 
-- Background warm dark `#1A1714`
-- Card `#252019` dengan border `#34302A`
-- Accent terracotta `#C66B3D`
-- SSO buttons (Google, Apple) outline tipis
-- Dark only (memang sengaja)
+Lihat di [`flutter/onboarding-carousel/`](./flutter/onboarding-carousel).
+
+#### 3. Dashboard — finance
+
+Dashboard keuangan dengan animated balance counter, dua stat card, dan bar chart mingguan. Palet slate dark `#0F172A`.
+
+<p align="center">
+  <img src="assets/previews/flutter-dashboard.gif" width="240" alt="Flutter dashboard">
+</p>
+
+Lihat di [`flutter/dashboard-finance/`](./flutter/dashboard-finance).
+
+#### 4. Weather forecast
+
+Weather app dengan gradient sky lembut (light blue → cream), hourly forecast 5 jam, dan weekly forecast dengan bar range suhu.
+
+<p align="center">
+  <img src="assets/previews/flutter-weather.gif" width="240" alt="Flutter weather">
+</p>
+
+Lihat di [`flutter/weather-forecast/`](./flutter/weather-forecast).
+
+#### 5. Settings — paper
+
+Settings screen ala paper. Palet cream `#FAF7F0` dengan accent sand dan toggle golden `#D4A437`. Group cards dengan divider tipis.
+
+<p align="center">
+  <img src="assets/previews/flutter-settings.gif" width="240" alt="Flutter settings">
+</p>
+
+Lihat di [`flutter/settings-paper/`](./flutter/settings-paper).
+
+</details>
+
+---
+
+## React Native kits
+
+### 1. Login screen — warm dark
+
+Login dengan palet coklat hangat dark mode. Background warm near-black `#1A1714`, accent terracotta `#C66B3D`.
+
+<p align="center">
+  <img src="assets/previews/rn-login-warm.png" width="240" alt="RN login warm">
+</p>
 
 Lihat di [`react-native/login-screen-warm/`](./react-native/login-screen-warm).
 
----
+<details>
+<summary><b>Lihat 4 React Native kit lainnya</b></summary>
+<br>
 
-### 3. Profile screen — iOS classic (SwiftUI)
+#### 2. E-commerce product detail
 
-Profile screen ala profile bawaan iOS. Putih bersih, navbar tipis 44pt, avatar centered, stats row dengan vertical divider, dan grid postingan 3 kolom. Tanpa cover image, tanpa gradient.
+Product detail dengan gallery auto-rotating 3 slide, rating stars, quantity selector, dan bottom bar (favorite + add to cart). Palet sand/cream + terracotta.
 
 <p align="center">
-  <img src="assets/previews/swiftui-profile-screen.png" width="280" alt="SwiftUI profile screen preview">
+  <img src="assets/previews/rn-ecommerce.gif" width="240" alt="RN e-commerce">
 </p>
 
-- Background putih
-- Accent iOS blue `#007AFF`
-- Tipografi SF Pro
-- Navbar 44pt dengan bottom border 0.5px
-- Stats row dengan vertical divider 1px
-- Grid 3 kolom dengan gap 1px
+Lihat di [`react-native/e-commerce-product/`](./react-native/e-commerce-product).
+
+#### 3. Music player
+
+Music player ala vinyl record. Piringan hitam berputar dengan border emas, progress bar emas, tombol play/pause. Palet dark premium `#0F0F0F` + gold `#D4AF37`.
+
+<p align="center">
+  <img src="assets/previews/rn-music.gif" width="240" alt="RN music">
+</p>
+
+Lihat di [`react-native/music-player/`](./react-native/music-player).
+
+#### 4. Food delivery home
+
+Home screen food delivery dengan location header, search bar, kategori scrollable, banner promo, dan list restoran. Palet cream + terracotta.
+
+<p align="center">
+  <img src="assets/previews/rn-food.gif" width="240" alt="RN food delivery">
+</p>
+
+Lihat di [`react-native/food-delivery/`](./react-native/food-delivery).
+
+#### 5. Fitness tracker
+
+Fitness dashboard dark green `#0A1410` dengan ring progress langkah (SVG), 4 stat card, dan bar chart mingguan. Animated counter + ring saat load.
+
+<p align="center">
+  <img src="assets/previews/rn-fitness.gif" width="240" alt="RN fitness">
+</p>
+
+Lihat di [`react-native/fitness-tracker/`](./react-native/fitness-tracker).
+
+</details>
+
+---
+
+## SwiftUI kits
+
+### 1. Profile screen — iOS classic
+
+Profile screen ala profile bawaan iOS. Putih bersih, navbar tipis 44pt, avatar centered, accent iOS blue `#007AFF`.
+
+<p align="center">
+  <img src="assets/previews/swiftui-profile-screen.png" width="240" alt="SwiftUI profile">
+</p>
 
 Lihat di [`swiftui/profile-screen-ios/`](./swiftui/profile-screen-ios).
 
----
+<details>
+<summary><b>Lihat 4 SwiftUI kit lainnya</b></summary>
+<br>
 
-### 4. Chat UI — monochrome (Jetpack Compose)
+#### 2. Notes — journal
 
-Chat screen monochrome. Pesan terkirim pakai bubble charcoal `#1A1A1A`, pesan diterima pakai light gray `#F4F4F6`. Background putih, border tipis 1px di topbar dan input bar. Tanpa warna Material 3, tanpa gradient.
+Editor jurnal dengan palet kertas cream `#F5EFE0`. Tipografi serif untuk body, sans untuk chrome. Bottom FAB untuk edit.
 
 <p align="center">
-  <img src="assets/previews/compose-chat-monochrome.png" width="280" alt="Jetpack Compose monochrome chat preview">
+  <img src="assets/previews/swiftui-notes.gif" width="240" alt="SwiftUI notes">
 </p>
 
-- Bubble terkirim `#1A1A1A` dengan teks putih
-- Bubble diterima `#F4F4F6` dengan teks gelap
-- Border 1px `#ECECEC`
-- Topbar dengan avatar + nama + status
-- Input bar dengan attach + send icon
-- Typing indicator
+Lihat di [`swiftui/notes-journal/`](./swiftui/notes-journal).
+
+#### 3. Calendar — minimal
+
+Calendar monthly view dengan accent red `#D64545`. Days grid dengan dot indicator untuk hari ada event, today highlighted, agenda di bawah.
+
+<p align="center">
+  <img src="assets/previews/swiftui-calendar.gif" width="240" alt="SwiftUI calendar">
+</p>
+
+Lihat di [`swiftui/calendar-minimal/`](./swiftui/calendar-minimal).
+
+#### 4. Wallet — cards
+
+Wallet app dark green forest `#0F1F1A`. Animated balance counter, kartu bank dengan chip emas, dan list transaksi dengan icon berwarna. Accent green `#4ADE80`.
+
+<p align="center">
+  <img src="assets/previews/swiftui-wallet.gif" width="240" alt="SwiftUI wallet">
+</p>
+
+Lihat di [`swiftui/wallet-cards/`](./swiftui/wallet-cards).
+
+#### 5. News reader
+
+News reader ala koran editorial. Brand "The Daily." dengan titik merah, horizontal tab strip, hero article, dan list items dengan thumbnail. Accent red `#C8102E`.
+
+<p align="center">
+  <img src="assets/previews/swiftui-news.gif" width="240" alt="SwiftUI news">
+</p>
+
+Lihat di [`swiftui/news-reader/`](./swiftui/news-reader).
+
+</details>
+
+---
+
+## Jetpack Compose kits
+
+### 1. Chat UI — monochrome
+
+Chat screen monochrome. Bubble terkirim charcoal `#1A1A1A`, diterima `#F4F4F6`. Border 1px `#ECECEC`. Tanpa warna Material 3.
+
+<p align="center">
+  <img src="assets/previews/compose-chat-monochrome.png" width="240" alt="Compose chat monochrome">
+</p>
 
 Lihat di [`jetpack-compose/chat-ui-monochrome/`](./jetpack-compose/chat-ui-monochrome).
 
----
+<details>
+<summary><b>Lihat 4 Jetpack Compose kit lainnya</b></summary>
+<br>
 
-## Categories
+#### 2. Email inbox
 
-Repo ini akan terus diisi. Roadmap kategori:
+Email inbox dengan palet cream paper `#F5F0E6`. Folder chips horizontal, list email dengan avatar berwarna, subject bold untuk unread, FAB "Tulis".
 
-- **Auth & onboarding** — login, register, OTP, onboarding carousel, biometric
-- **Dashboard & analytics** — admin panel, sales analytics, crypto wallet, fitness tracker
-- **E-commerce** — product listing, detail, cart, checkout, order tracking
-- **Profile & social** — profile page, settings, chat, feed, story viewer
-- **Navigation** — bottom bar, drawer, tab bar, FAB menu, bottom sheet
-- **Misc** — weather, food delivery, booking, news, banking
+<p align="center">
+  <img src="assets/previews/compose-email.gif" width="240" alt="Compose email">
+</p>
+
+Lihat di [`jetpack-compose/email-inbox/`](./jetpack-compose/email-inbox).
+
+#### 3. Todo — sticky notes
+
+Todo list ala sticky notes. Tiap card diberi rotasi kecil dan warna kuning/amber selang-seling, dengan pin merah. Checkbox toggle dengan strike-through.
+
+<p align="center">
+  <img src="assets/previews/compose-todo.gif" width="240" alt="Compose todo">
+</p>
+
+Lihat di [`jetpack-compose/todo-sticky/`](./jetpack-compose/todo-sticky).
+
+#### 4. Calculator — terminal
+
+Calculator ala terminal green-on-black. Display 64sp dengan glow, tombol operator terminal green `#00FF88`, tombol equals solid green.
+
+<p align="center">
+  <img src="assets/previews/compose-calculator.gif" width="240" alt="Compose calculator">
+</p>
+
+Lihat di [`jetpack-compose/calculator-terminal/`](./jetpack-compose/calculator-terminal).
+
+#### 5. Maps — paper
+
+Maps screen ala paper map `#E8DFC8`. Jalan putih dengan border tan, park sage, water soft blue. Pin terracotta dengan pulse, bottom card info tempat.
+
+<p align="center">
+  <img src="assets/previews/compose-maps.gif" width="240" alt="Compose maps">
+</p>
+
+Lihat di [`jetpack-compose/maps-paper/`](./jetpack-compose/maps-paper).
+
+</details>
 
 ---
 
@@ -141,6 +294,8 @@ flutter run
 
 Atau unduh folder tertentu saja lewat [DownGit](https://downgit.github.io/) kalau gak mau clone semuanya.
 
+Setiap kit berisi file kode asli per framework (`.dart` + `pubspec.yaml`, `.tsx` + `package.json`, `.swift`, `.kt`), bukan cuma mockup. Tinggal jalankan di editor / simulator masing-masing.
+
 ---
 
 ## Folder layout
@@ -148,15 +303,31 @@ Atau unduh folder tertentu saja lewat [DownGit](https://downgit.github.io/) kala
 ```
 ui-folio/
 ├── flutter/
-│   └── login-screen-minimalist/
+│   ├── login-screen-minimalist/    .dart + pubspec.yaml
+│   ├── onboarding-carousel/
+│   ├── dashboard-finance/
+│   ├── weather-forecast/
+│   └── settings-paper/
 ├── react-native/
-│   └── login-screen-warm/
+│   ├── login-screen-warm/          .tsx + package.json
+│   ├── e-commerce-product/
+│   ├── music-player/
+│   ├── food-delivery/
+│   └── fitness-tracker/
 ├── swiftui/
-│   └── profile-screen-ios/
+│   ├── profile-screen-ios/         .swift
+│   ├── notes-journal/
+│   ├── calendar-minimal/
+│   ├── wallet-cards/
+│   └── news-reader/
 ├── jetpack-compose/
-│   └── chat-ui-monochrome/
+│   ├── chat-ui-monochrome/         .kt
+│   ├── email-inbox/
+│   ├── todo-sticky/
+│   ├── calculator-terminal/
+│   └── maps-paper/
 ├── assets/
-│   └── previews/
+│   └── previews/                   PNG + GIF previews
 ├── CONTRIBUTING.md
 ├── CODE_OF_CONDUCT.md
 └── LICENSE
@@ -172,19 +343,18 @@ Beberapa hal yang perlu diingat:
 
 - Tulis kode sendiri, jangan salin dari repo berlisensi restriktif
 - Pixel-perfect, responsive, accessible — bukan cuma cantik di screenshot
-- Dark mode wajib
-- Sertakan screenshot atau GIF di README kit kamu
+- Dark mode wajib (atau eksplisit light only dengan alasan)
+- Sertakan preview PNG atau GIF di README kit kamu
 - Hindari gradient warna mencolok (biru-merah, ungu-pink) — pilih palet yang tenang
+- Pilih palet yang spesifik: cream paper, warm dark, forest green, terminal, monochrome, sand, dll. Bukan "default Material" atau "iOS blue gradient"
 
 ---
 
 ## Roadmap
 
 - [x] 4 starter kit (satu per framework)
-- [ ] 20 kit Flutter
-- [ ] 20 kit React Native
-- [ ] 20 kit SwiftUI
-- [ ] 20 kit Jetpack Compose
+- [x] 20 kit total (5 per framework)
+- [ ] 50 kit total
 - [ ] Kotlin Multiplatform
 - [ ] .NET MAUI
 - [ ] Website showcase
