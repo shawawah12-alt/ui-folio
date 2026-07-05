@@ -13,8 +13,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF6C63FF)),
-        textTheme: GoogleFonts.poppinsTextTheme(),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF111111),
+          primary: const Color(0xFF111111),
+          surface: const Color(0xFFFFFFFF),
+        ),
+        textTheme: GoogleFonts.interTextTheme(),
       ),
       home: const LoginScreen(),
     );
@@ -42,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
     setState(() => _isLoading = false);
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Login berhasil! (demo)')),
+      const SnackBar(content: Text('Login berhasil (demo)')),
     );
   }
 
@@ -55,107 +59,179 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.sizeOf(context);
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: EdgeInsets.symmetric(
-              horizontal: size.width * 0.08,
-              vertical: 24,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 72),
             child: Form(
               key: _formKey,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const FlutterLogo(size: 72),
-                  const SizedBox(height: 24),
-                  Text(
-                    'Selamat Datang',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          fontWeight: FontWeight.w700,
-                        ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    'Masuk untuk melanjutkan',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: Colors.grey.shade600,
-                        ),
-                  ),
-                  const SizedBox(height: 32),
-                  TextFormField(
-                    controller: _emailCtrl,
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: const InputDecoration(
-                      labelText: 'Email',
-                      border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.email_outlined),
+                  Container(
+                    width: 44,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF111111),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    validator: (v) {
-                      if (v == null || v.isEmpty) return 'Email wajib diisi';
-                      if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(v)) {
-                        return 'Email tidak valid';
-                      }
-                      return null;
-                    },
-                  ),
-                  const SizedBox(height: 16),
-                  TextFormField(
-                    controller: _passCtrl,
-                    obscureText: _obscure,
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                      border: const OutlineInputBorder(),
-                      prefixIcon: const Icon(Icons.lock_outline),
-                      suffixIcon: IconButton(
-                        icon: Icon(_obscure ? Icons.visibility_off : Icons.visibility),
-                        onPressed: () => setState(() => _obscure = !_obscure),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'F',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
-                    validator: (v) {
-                      if (v == null || v.isEmpty) return 'Password wajib diisi';
-                      if (v.length < 6) return 'Minimal 6 karakter';
-                      return null;
-                    },
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 56),
+                  Text(
+                    'Selamat datang',
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                          fontWeight: FontWeight.w600,
+                          color: const Color(0xFF111111),
+                          letterSpacing: -0.6,
+                        ),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    'Masuk untuk melanjutkan',
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: const Color(0xFF8E8E93),
+                        ),
+                  ),
+                  const SizedBox(height: 40),
+                  _LabeledField(
+                    caption: 'EMAIL',
+                    child: TextFormField(
+                      controller: _emailCtrl,
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: const InputDecoration(
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFFE5E5EA)),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFFE5E5EA)),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFF111111), width: 1.5),
+                        ),
+                      ),
+                      validator: (v) {
+                        if (v == null || v.isEmpty) return 'Email wajib diisi';
+                        if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(v)) {
+                          return 'Email tidak valid';
+                        }
+                        return null;
+                      },
+                    ),
+                  ),
+                  const SizedBox(height: 22),
+                  _LabeledField(
+                    caption: 'PASSWORD',
+                    child: TextFormField(
+                      controller: _passCtrl,
+                      obscureText: _obscure,
+                      decoration: InputDecoration(
+                        border: const UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFFE5E5EA)),
+                        ),
+                        enabledBorder: const UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFFE5E5EA)),
+                        ),
+                        focusedBorder: const UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFF111111), width: 1.5),
+                        ),
+                        suffixIcon: TextButton(
+                          onPressed: () => setState(() => _obscure = !_obscure),
+                          child: Text(
+                            _obscure ? 'Lihat' : 'Sembunyikan',
+                            style: const TextStyle(
+                              color: Color(0xFF8E8E93),
+                              fontSize: 13,
+                            ),
+                          ),
+                        ),
+                      ),
+                      validator: (v) {
+                        if (v == null || v.isEmpty) return 'Password wajib diisi';
+                        if (v.length < 6) return 'Minimal 6 karakter';
+                        return null;
+                      },
+                    ),
+                  ),
+                  const SizedBox(height: 12),
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: () {},
-                      child: const Text('Lupa password?'),
+                      child: const Text(
+                        'Lupa password?',
+                        style: TextStyle(
+                          color: Color(0xFF111111),
+                          decoration: TextDecoration.underline,
+                          decorationThickness: 1,
+                          fontSize: 13,
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 16),
                   FilledButton(
                     onPressed: _isLoading ? null : _handleLogin,
                     style: FilledButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      backgroundColor: const Color(0xFF111111),
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 14),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(10),
                       ),
+                      elevation: 0,
                     ),
                     child: _isLoading
                         ? const SizedBox(
-                            height: 20,
-                            width: 20,
-                            child: CircularProgressIndicator(strokeWidth: 2),
+                            height: 18,
+                            width: 18,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              color: Colors.white,
+                            ),
                           )
-                        : const Text('Masuk'),
+                        : const Text(
+                            'Masuk',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                              letterSpacing: 0.1,
+                            ),
+                          ),
                   ),
                   const SizedBox(height: 24),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text('Belum punya akun? '),
+                      const Text(
+                        'Belum punya akun? ',
+                        style: TextStyle(color: Color(0xFF8E8E93), fontSize: 13),
+                      ),
                       TextButton(
                         onPressed: () {},
-                        child: const Text('Daftar sekarang'),
+                        style: TextButton.styleFrom(
+                          foregroundColor: const Color(0xFF111111),
+                          padding: EdgeInsets.zero,
+                          minimumSize: const Size(0, 0),
+                        ),
+                        child: const Text(
+                          'Daftar',
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            decorationThickness: 1,
+                            fontSize: 13,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -165,6 +241,33 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class _LabeledField extends StatelessWidget {
+  final String caption;
+  final Widget child;
+
+  const _LabeledField({required this.caption, required this.child});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          caption,
+          style: const TextStyle(
+            fontSize: 11,
+            fontWeight: FontWeight.w600,
+            color: Color(0xFF111111),
+            letterSpacing: 0.6,
+          ),
+        ),
+        const SizedBox(height: 8),
+        child,
+      ],
     );
   }
 }

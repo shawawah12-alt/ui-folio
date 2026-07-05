@@ -1,20 +1,20 @@
-# 🔐 Login Screen Minimalist (Flutter)
+# Login screen — minimalist (Flutter)
 
-> Login screen bersih dengan tipografi bold dan tombol gradient halus. Cocok untuk aplikasi modern yang ingin tampil simpel tapi tetap elegan.
+Login bersih ala Swiss. Putih, hitam, satu accent, tanpa gradient, tanpa shadow. Input pakai border bawah, bukan kotak. Cocok untuk aplikasi yang ingin terlihat tenang dan terorganisir.
 
 ## Preview
 
-![preview](../../assets/preview-gifs/flutter-login-minimalist.png)
+![preview](../../assets/previews/flutter-login-minimalist.png)
 
-## Fitur / Features
+## Detail
 
-- Layout responsive (mobile + tablet)
-- Dark mode ready
-- Validasi email & password
-- Loading state di tombol login
-- Animasi fade-in halus
+- Background putih, accent `#111111`
+- Tipografi Inter
+- Input dengan border bawah 1px
+- Tombol solid hitam, elevation 0
+- Dark mode ikut sistem
 
-## Cara Pakai / How to Use
+## Cara pakai
 
 ```bash
 cd flutter/login-screen-minimalist
@@ -22,18 +22,18 @@ flutter pub get
 flutter run
 ```
 
-## Customisasi / Customization
+## Customisasi
 
-- Warna utama ada di `lib/theme/colors.dart`
-- Logo bisa diganti di `lib/widgets/header_logo.dart`
-- Logic login ada di `lib/services/auth_service.dart`
+- Warna utama: `lib/main.dart` → `ColorScheme.fromSeed`
+- Logo: ganti `Container` di bagian atas
+- Validasi: `validator` di tiap `TextFormField`
 
-## Tech Stack
+## Tech stack
 
 - Flutter 3.x
 - Dart 3.x
-- google_fonts package
+- `google_fonts` (Inter)
 
 ## License
 
-MIT — bebas dipakai, modifikasi, dan distribusi ulang.
+MIT

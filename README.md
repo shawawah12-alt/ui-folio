@@ -43,69 +43,75 @@ Setiap kit punya kode lengkap, screenshot, dan catatan customisasi. Tidak ada bo
 
 ### 1. Login screen — minimalist (Flutter)
 
-Login bersih dengan tipografi bold, tombol solid, dan validasi inline. Cocok untuk aplikasi modern yang ingin tampil simpel tanpa banyak ornamen.
+Login ala Swiss. Putih, hitam, satu accent, tanpa gradient, tanpa shadow. Input pakai border bawah 1px, bukan kotak. Cocok untuk aplikasi yang ingin terlihat tenang dan terorganisir.
 
 <p align="center">
-  <img src="assets/previews/flutter-login-minimalist.png" width="280" alt="Flutter login screen preview">
+  <img src="assets/previews/flutter-login-minimalist.png" width="280" alt="Flutter login minimalist preview">
 </p>
 
-- Responsive, jalan di mobile sampai tablet
+- Background putih, accent `#111111`
+- Tipografi Inter
+- Input border bawah, bukan kotak
+- Tombol solid hitam, elevation 0
 - Dark mode ikut sistem
-- Validasi email & password real-time
-- Loading state di tombol
 
 Lihat di [`flutter/login-screen-minimalist/`](./flutter/login-screen-minimalist).
 
 ---
 
-### 2. Login screen — glassmorphism (React Native)
+### 2. Login screen — warm dark (React Native)
 
-Login dengan efek kaca buram di atas background gradient. Pakai `expo-blur`, animasi halus via `react-native-reanimated`.
+Login dengan palet coklat hangat dark mode. Background warm near-black `#1A1714`, accent terracotta `#C66B3D`. Tanpa gradient, tanpa blur, tanpa shadow. Card polos dengan border tipis.
 
 <p align="center">
-  <img src="assets/previews/rn-login-glassmorphism.png" width="280" alt="React Native glassmorphism login preview">
+  <img src="assets/previews/rn-login-warm.png" width="280" alt="React Native warm dark login preview">
 </p>
 
-- Efek blur asli di iOS, fallback di Android
-- Dark mode ready
-- Form dengan validasi
-- Berjalan di iOS, Android, Web
+- Background warm dark `#1A1714`
+- Card `#252019` dengan border `#34302A`
+- Accent terracotta `#C66B3D`
+- SSO buttons (Google, Apple) outline tipis
+- Dark only (memang sengaja)
 
-Lihat di [`react-native/login-screen-glassmorphism/`](./react-native/login-screen-glassmorphism).
+Lihat di [`react-native/login-screen-warm/`](./react-native/login-screen-warm).
 
 ---
 
-### 3. Profile screen — iOS style (SwiftUI)
+### 3. Profile screen — iOS classic (SwiftUI)
 
-Profile screen ala Instagram tapi lebih tenang. Cover image, avatar floating, stats row, action buttons, dan grid postingan.
+Profile screen ala profile bawaan iOS. Putih bersih, navbar tipis 44pt, avatar centered, stats row dengan vertical divider, dan grid postingan 3 kolom. Tanpa cover image, tanpa gradient.
 
 <p align="center">
   <img src="assets/previews/swiftui-profile-screen.png" width="280" alt="SwiftUI profile screen preview">
 </p>
 
-- Cover image dengan gradient overlay
-- Avatar floating dengan border putih
-- Stats row (posts, followers, following)
-- LazyVGrid untuk performa
+- Background putih
+- Accent iOS blue `#007AFF`
+- Tipografi SF Pro
+- Navbar 44pt dengan bottom border 0.5px
+- Stats row dengan vertical divider 1px
+- Grid 3 kolom dengan gap 1px
 
 Lihat di [`swiftui/profile-screen-ios/`](./swiftui/profile-screen-ios).
 
 ---
 
-### 4. Chat UI — Material 3 (Jetpack Compose)
+### 4. Chat UI — monochrome (Jetpack Compose)
 
-Chat screen dengan bubble pesan corner-cut khas Material 3, typing indicator animasi, dan input bar mengambang ala Telegram.
+Chat screen monochrome. Pesan terkirim pakai bubble charcoal `#1A1A1A`, pesan diterima pakai light gray `#F4F4F6`. Background putih, border tipis 1px di topbar dan input bar. Tanpa warna Material 3, tanpa gradient.
 
 <p align="center">
-  <img src="assets/previews/compose-chat-material3.png" width="280" alt="Jetpack Compose chat UI preview">
+  <img src="assets/previews/compose-chat-monochrome.png" width="280" alt="Jetpack Compose monochrome chat preview">
 </p>
 
-- Bubble pesan terkirim dan diterima berbeda
-- Typing indicator dengan animasi
-- Input bar dengan tombol attach dan send
-- LazyColumn untuk performa tinggi
+- Bubble terkirim `#1A1A1A` dengan teks putih
+- Bubble diterima `#F4F4F6` dengan teks gelap
+- Border 1px `#ECECEC`
+- Topbar dengan avatar + nama + status
+- Input bar dengan attach + send icon
+- Typing indicator
 
-Lihat di [`jetpack-compose/chat-ui-material3/`](./jetpack-compose/chat-ui-material3).
+Lihat di [`jetpack-compose/chat-ui-monochrome/`](./jetpack-compose/chat-ui-monochrome).
 
 ---
 
@@ -144,11 +150,11 @@ ui-folio/
 ├── flutter/
 │   └── login-screen-minimalist/
 ├── react-native/
-│   └── login-screen-glassmorphism/
+│   └── login-screen-warm/
 ├── swiftui/
 │   └── profile-screen-ios/
 ├── jetpack-compose/
-│   └── chat-ui-material3/
+│   └── chat-ui-monochrome/
 ├── assets/
 │   └── previews/
 ├── CONTRIBUTING.md
@@ -168,6 +174,7 @@ Beberapa hal yang perlu diingat:
 - Pixel-perfect, responsive, accessible — bukan cuma cantik di screenshot
 - Dark mode wajib
 - Sertakan screenshot atau GIF di README kit kamu
+- Hindari gradient warna mencolok (biru-merah, ungu-pink) — pilih palet yang tenang
 
 ---
 

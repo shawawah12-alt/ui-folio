@@ -1,25 +1,35 @@
-# 👤 Profile Screen iOS (SwiftUI)
+# Profile screen — iOS classic (SwiftUI)
 
-> Profile screen dengan cover image, avatar floating, action buttons horizontal, dan stats row. Desain ala Instagram-profile tapi lebih clean.
+Profile screen ala profile bawaan iOS. Putih bersih, navbar tipis 44pt, avatar centered, stats row dengan vertical divider, dan grid postingan 3 kolom. Tanpa cover image, tanpa gradient.
 
-## Fitur / Features
+## Preview
 
-- Cover image dengan gradient overlay
-- Avatar floating dengan border putih
-- Stats row (followers, following, posts)
-- Action buttons (Follow, Message)
-- Daftar postingan dengan LazyVGrid
-- Dark mode ready otomatis (ikut sistem)
+![preview](../../assets/previews/swiftui-profile-screen.png)
 
-## Cara Pakai / How to Use
+## Detail
+
+- Background putih
+- Accent iOS blue `#007AFF`
+- Tipografi SF Pro
+- Navbar 44pt dengan bottom border 0.5px
+- Stats row dengan vertical divider 1px
+- Grid 3 kolom dengan gap 1px
+
+## Cara pakai
 
 ```bash
 cd swiftui/profile-screen-ios
 open ProfileScreenIOS.xcodeproj
-# Pilih simulator, tekan Cmd+R
+# Cmd+R di simulator
 ```
 
-## Tech Stack
+## Customisasi
+
+- Avatar: ganti `Circle` + `Image(systemName: "person.fill")` dengan `AsyncImage` (URL) atau asset lokal
+- Stats: ubah `statItem(num:label:)` jadi data dinamis
+- Grid: ganti placeholder `Rectangle` jadi `AsyncImage` dari URL postingan
+
+## Tech stack
 
 - SwiftUI 5
 - iOS 17+ deployment target
@@ -27,4 +37,4 @@ open ProfileScreenIOS.xcodeproj
 
 ## License
 
-MIT — bebas dipakai, modifikasi, dan distribusi ulang.
+MIT
