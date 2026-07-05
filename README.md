@@ -23,7 +23,7 @@ A curated shelf of mobile UI kits — Flutter, React Native, SwiftUI, Jetpack Co
 
 Kumpulan UI kit mobile siap pakai, lintas framework. Daripada mulai dari blank page tiap project, ambil satu dari sini, sesuaikan, jalan.
 
-Setiap kit punya kode lengkap (`*.dart`, `*.tsx`, `*.swift`, `*.kt` — bukan cuma mockup), preview MP4 beranimasi (540p @ 30fps, autoplay tanpa tombol play), dan catatan customisasi. Tidak ada template AI — cuma kode biasa yang ditulis tangan dengan palet yang dipilih satu per satu.
+Setiap kit punya kode lengkap (`*.dart`, `*.tsx`, `*.swift`, `*.kt` — bukan cuma mockup), screenshot PNG tajam (760×1520 @ 2x retina), dan catatan customisasi. Tidak ada template AI — cuma kode biasa yang ditulis tangan dengan palet yang dipilih satu per satu.
 
 ---
 
@@ -62,7 +62,7 @@ Lihat di [`flutter/login-screen-minimalist/`](./flutter/login-screen-minimalist)
 3 slide dengan ilustrasi sirkular (sage/sand/sky) dan dots indicator animated. Tombol "Lewati" di kanan atas, berubah jadi "Mulai" di slide terakhir.
 
 <p align="center">
-  <video src="assets/previews/flutter-onboarding.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/flutter-onboarding.png" width="240" alt="Flutter onboarding">
 </p>
 
 Lihat di [`flutter/onboarding-carousel/`](./flutter/onboarding-carousel).
@@ -72,7 +72,7 @@ Lihat di [`flutter/onboarding-carousel/`](./flutter/onboarding-carousel).
 Dashboard keuangan dengan animated balance counter, dua stat card, dan bar chart mingguan. Palet slate dark `#0F172A`.
 
 <p align="center">
-  <video src="assets/previews/flutter-dashboard.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/flutter-dashboard.png" width="240" alt="Flutter dashboard">
 </p>
 
 Lihat di [`flutter/dashboard-finance/`](./flutter/dashboard-finance).
@@ -82,7 +82,7 @@ Lihat di [`flutter/dashboard-finance/`](./flutter/dashboard-finance).
 Weather app dengan gradient sky lembut (light blue → cream), hourly forecast 5 jam, dan weekly forecast dengan bar range suhu. Semua ikon cuaca pakai SVG, bukan emoji.
 
 <p align="center">
-  <video src="assets/previews/flutter-weather.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/flutter-weather.png" width="240" alt="Flutter weather">
 </p>
 
 Lihat di [`flutter/weather-forecast/`](./flutter/weather-forecast).
@@ -92,7 +92,7 @@ Lihat di [`flutter/weather-forecast/`](./flutter/weather-forecast).
 Settings screen ala paper. Palet cream `#FAF7F0` dengan accent sand dan toggle golden `#D4A437`. Group cards dengan divider tipis.
 
 <p align="center">
-  <video src="assets/previews/flutter-settings.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/flutter-settings.png" width="240" alt="Flutter settings">
 </p>
 
 Lihat di [`flutter/settings-paper/`](./flutter/settings-paper).
@@ -119,20 +119,20 @@ Lihat di [`react-native/login-screen-warm/`](./react-native/login-screen-warm).
 
 #### 2. E-commerce product detail
 
-Product detail dengan gallery auto-rotating 3 slide, rating stars, quantity selector, dan bottom bar (favorite + add to cart). Palet sand/cream + terracotta. Semua ikon SVG.
+Product detail dengan gallery 3 slide, rating stars, quantity selector, dan bottom bar (favorite + add to cart). Palet sand/cream + terracotta. Semua ikon SVG.
 
 <p align="center">
-  <video src="assets/previews/rn-ecommerce.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/rn-ecommerce.png" width="240" alt="RN e-commerce">
 </p>
 
 Lihat di [`react-native/e-commerce-product/`](./react-native/e-commerce-product).
 
 #### 3. Music player
 
-Music player ala vinyl record. Piringan hitam berputar dengan border emas, progress bar emas, tombol play/pause SVG. Palet dark premium `#0F0F0F` + gold `#D4AF37`.
+Music player ala vinyl record. Piringan hitam dengan border emas, progress bar emas, tombol play/pause SVG. Palet dark premium `#0F0F0F` + gold `#D4AF37`.
 
 <p align="center">
-  <video src="assets/previews/rn-music.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/rn-music.png" width="240" alt="RN music">
 </p>
 
 Lihat di [`react-native/music-player/`](./react-native/music-player).
@@ -142,17 +142,17 @@ Lihat di [`react-native/music-player/`](./react-native/music-player).
 Home screen food delivery dengan location header, search bar SVG, kategori scrollable, banner promo, dan list restoran. Palet cream + terracotta.
 
 <p align="center">
-  <video src="assets/previews/rn-food.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/rn-food.png" width="240" alt="RN food delivery">
 </p>
 
 Lihat di [`react-native/food-delivery/`](./react-native/food-delivery).
 
 #### 5. Fitness tracker
 
-Fitness dashboard dark green `#0A1410` dengan ring progress langkah (SVG), 4 stat card dengan ikon SVG berwarna, dan bar chart mingguan. Animated counter + ring saat load.
+Fitness dashboard dark green `#0A1410` dengan ring progress langkah (SVG), 4 stat card dengan ikon SVG berwarna, dan bar chart mingguan.
 
 <p align="center">
-  <video src="assets/previews/rn-fitness.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/rn-fitness.png" width="240" alt="RN fitness">
 </p>
 
 Lihat di [`react-native/fitness-tracker/`](./react-native/fitness-tracker).
@@ -182,7 +182,7 @@ Lihat di [`swiftui/profile-screen-ios/`](./swiftui/profile-screen-ios).
 Editor jurnal dengan palet kertas cream `#F5EFE0`. Tipografi serif untuk body, sans untuk chrome. Bottom FAB dengan ikon pencil SVG.
 
 <p align="center">
-  <video src="assets/previews/swiftui-notes.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/swiftui-notes.png" width="240" alt="SwiftUI notes">
 </p>
 
 Lihat di [`swiftui/notes-journal/`](./swiftui/notes-journal).
@@ -192,7 +192,7 @@ Lihat di [`swiftui/notes-journal/`](./swiftui/notes-journal).
 Calendar monthly view dengan accent red `#D64545`. Days grid dengan dot indicator untuk hari ada event, today highlighted, agenda di bawah.
 
 <p align="center">
-  <video src="assets/previews/swiftui-calendar.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/swiftui-calendar.png" width="240" alt="SwiftUI calendar">
 </p>
 
 Lihat di [`swiftui/calendar-minimal/`](./swiftui/calendar-minimal).
@@ -202,7 +202,7 @@ Lihat di [`swiftui/calendar-minimal/`](./swiftui/calendar-minimal).
 Wallet app dark green forest `#0F1F1A`. Animated balance counter, kartu bank dengan chip emas, dan list transaksi dengan ikon SVG berwarna. Accent green `#4ADE80`.
 
 <p align="center">
-  <video src="assets/previews/swiftui-wallet.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/swiftui-wallet.png" width="240" alt="SwiftUI wallet">
 </p>
 
 Lihat di [`swiftui/wallet-cards/`](./swiftui/wallet-cards).
@@ -212,7 +212,7 @@ Lihat di [`swiftui/wallet-cards/`](./swiftui/wallet-cards).
 News reader ala koran editorial. Brand "The Daily." dengan titik merah, horizontal tab strip dengan ikon search & menu SVG, hero article, dan list items.
 
 <p align="center">
-  <video src="assets/previews/swiftui-news.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/swiftui-news.png" width="240" alt="SwiftUI news">
 </p>
 
 Lihat di [`swiftui/news-reader/`](./swiftui/news-reader).
@@ -242,7 +242,7 @@ Lihat di [`jetpack-compose/chat-ui-monochrome/`](./jetpack-compose/chat-ui-monoc
 Email inbox dengan palet cream paper `#F5F0E6`. Folder chips horizontal, list email dengan avatar berwarna, subject bold untuk unread, FAB "Tulis" dengan ikon pencil SVG.
 
 <p align="center">
-  <video src="assets/previews/compose-email.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/compose-email.png" width="240" alt="Compose email">
 </p>
 
 Lihat di [`jetpack-compose/email-inbox/`](./jetpack-compose/email-inbox).
@@ -252,7 +252,7 @@ Lihat di [`jetpack-compose/email-inbox/`](./jetpack-compose/email-inbox).
 Todo list ala sticky notes. Tiap card diberi rotasi kecil dan warna kuning/amber selang-seling, dengan pin merah. Checkbox toggle dengan strike-through.
 
 <p align="center">
-  <video src="assets/previews/compose-todo.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/compose-todo.png" width="240" alt="Compose todo">
 </p>
 
 Lihat di [`jetpack-compose/todo-sticky/`](./jetpack-compose/todo-sticky).
@@ -262,7 +262,7 @@ Lihat di [`jetpack-compose/todo-sticky/`](./jetpack-compose/todo-sticky).
 Calculator ala terminal green-on-black. Display 64sp dengan glow, tombol operator terminal green `#00FF88`, tombol equals solid green.
 
 <p align="center">
-  <video src="assets/previews/compose-calculator.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/compose-calculator.png" width="240" alt="Compose calculator">
 </p>
 
 Lihat di [`jetpack-compose/calculator-terminal/`](./jetpack-compose/calculator-terminal).
@@ -272,7 +272,7 @@ Lihat di [`jetpack-compose/calculator-terminal/`](./jetpack-compose/calculator-t
 Maps screen ala paper map `#E8DFC8`. Jalan putih dengan border tan, park sage, water soft blue. Pin terracotta dengan pulse, bottom card info tempat dengan ikon SVG (star, clock, navigation).
 
 <p align="center">
-  <video src="assets/previews/compose-maps.mp4" width="240" autoplay muted loop playsinline></video>
+  <img src="assets/previews/compose-maps.png" width="240" alt="Compose maps">
 </p>
 
 Lihat di [`jetpack-compose/maps-paper/`](./jetpack-compose/maps-paper).
@@ -295,8 +295,6 @@ flutter run
 Atau unduh folder tertentu saja lewat [DownGit](https://downgit.github.io/) kalau gak mau clone semuanya.
 
 Setiap kit berisi file kode asli per framework (`.dart` + `pubspec.yaml`, `.tsx` + `package.json`, `.swift`, `.kt`), bukan cuma mockup. Tinggal jalankan di editor / simulator masing-masing.
-
-Preview di README pakai `<video autoplay muted loop playsinline>` jadi langsung putar sendiri tanpa tombol play. Resolusi 540×1080 @ 30fps, total ~2.4MB untuk 16 preview.
 
 ---
 
@@ -329,7 +327,7 @@ ui-folio/
 │   ├── calculator-terminal/
 │   └── maps-paper/
 ├── assets/
-│   └── previews/                   4 PNG (static kit) + 16 MP4 (animated kit)
+│   └── previews/                   20 PNG screenshots (760×1520 @ 2x retina)
 ├── CONTRIBUTING.md
 ├── CODE_OF_CONDUCT.md
 └── LICENSE
@@ -346,7 +344,7 @@ Beberapa hal yang perlu diingat:
 - Tulis kode sendiri, jangan salin dari repo berlisensi restriktif
 - Pixel-perfect, responsive, accessible — bukan cuma cantik di screenshot
 - Dark mode wajib (atau eksplisit light only dengan alasan)
-- Sertakan preview MP4 (540p @ 30fps, ~150KB) di README kit kamu. Lihat script record di `scripts/record_mp4_hq.py`
+- Sertakan screenshot PNG di README kit kamu (resolusi 760×1520 @ 2x retina)
 - Hindari gradient warna mencolok (biru-merah, ungu-pink) — pilih palet yang tenang
 - Pilih palet yang spesifik: cream paper, warm dark, forest green, terminal, monochrome, sand, dll. Bukan "default Material" atau "iOS blue gradient"
 - **Pakai SVG inline untuk ikon**, jangan emoji (🔍 ⚙ ⋮). Emoji render beda di tiap OS dan kelihatan gak konsisten
