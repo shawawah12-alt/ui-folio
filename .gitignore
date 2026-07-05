@@ -1,0 +1,63 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# Flutter / Dart
+flutter/**/.dart_tool/
+flutter/**/.packages
+flutter/**/.pub/
+flutter/**/build/
+flutter/**/.flutter-plugins
+flutter/**/.flutter-plugins-dependencies
+flutter/**/pubspec.lock
+
+# React Native
+react-native/**/node_modules/
+react-native/**/.expo/
+react-native/**/dist/
+react-native/**/web-build/
+react-native/**/npm-debug.*
+react-native/**/yarn-error.log
+react-native/**/ios/Pods/
+react-native/**/android/.gradle/
+react-native/**/android/build/
+react-native/**/android/app/build/
+react-native/**/.babelrc
+
+# Swift / Xcode
+swiftui/**/*.xcuserstate
+swiftui/**/xcuserdata/
+swiftui/**/DerivedData/
+swiftui/**/.build/
+swiftui/**/Package.resolved
+
+# Kotlin / Android Studio
+jetpack-compose/**/.gradle/
+jetpack-compose/**/build/
+jetpack-compose/**/local.properties
+jetpack-compose/**/captures/
+
+# Logs
+*.log
+logs/
+
+# Env files
+.env
+.env.local
+.env.*.local
